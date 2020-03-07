@@ -25,12 +25,13 @@ MultiThreading.runAsync(runnable);
 ## Example
 ```java
 
+// Useful to repeat a Runnable with a difned amount of time
 MultiThreading.schedule(() -> {
                     System.out.println("This scheduler will start after 5 seconds");
                     System.out.println("And repeat this runnable every 10 seconds.");
 }, 5, 10, TimeUnit.SECONDS);
 
-
+// Useful to start a runnable after a defined amount of time
 MultiThreading.schedule(() -> {
             System.out.println("This scheduler will run after 5 seconds");
 }, 5, TimeUnit.SECONDS);
